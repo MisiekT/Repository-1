@@ -1,15 +1,13 @@
-﻿#hasztag <mniej więcej>
+#hasztag <more>
 
-zmienna całkowita główna (dwa nawiasy)
+Main integer variable (two parentheses)
 
-nawias kwadratowy otwarcie
+Bare square opening
 
-zmianna całkowita nazwa a średnik
+Change the total name of the measure
 
-wyśiwetl nawias cudzysłów prcocent i cudzysłów przecinek a nawias średnik 
+Display parentheses with quotes and quotation marks comma in brackets
 
-oddaj zero średnik
+Give zero semicolon
 
-nawias kwadratowy zamknięcie
-
-co
+Hinged square closed
