@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
  
@@ -9,7 +9,7 @@ void show(void *u, int w, int h)
 	
 	
 	//BYŁEM TU
-	
+	neniei nien ie nie;
 	
 {
 	int (*univ)[w] = u;
