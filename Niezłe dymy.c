@@ -6,6 +6,11 @@
 #define for_y for (int y = 0; y < h; y++)
 #define for_xy for_x for_y
 void show(void *u, int w, int h)
+	
+	
+	//BYŁEM TU
+	
+	
 {
 	int (*univ)[w] = u;
 	printf("\033[H");
