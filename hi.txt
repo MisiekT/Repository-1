@@ -1,4 +1,4 @@
-#hasztag <mniej więcej>
+﻿#hasztag <mniej więcej>
 
 zmienna całkowita główna (dwa nawiasy)
 
@@ -11,3 +11,5 @@ wyśiwetl nawias cudzysłów prcocent i cudzysłów przecinek a nawias średnik
 oddaj zero średnik
 
 nawias kwadratowy zamknięcie
+
+co
