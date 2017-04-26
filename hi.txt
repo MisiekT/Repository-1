@@ -1,1 +1,13 @@
-no cze��
+#hasztag <mniej więcej>
+
+zmienna całkowita główna (dwa nawiasy)
+
+nawias kwadratowy otwarcie
+
+zmianna całkowita nazwa a średnik
+
+wyśiwetl nawias cudzysłów prcocent i cudzysłów przecinek a nawias średnik 
+
+oddaj zero średnik
+
+nawias kwadratowy zamknięcie
