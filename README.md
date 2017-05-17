@@ -24,8 +24,4 @@ Opisik, żeby był:
 https://trello.com/b/Chpsg32i/robot
 
 
-Wykonawcy:
--Michał Torzewicz
--Bartosz Jaśko
--Dawid Drąg
--Jakub Jan Wawryka
+Tyrell corp
