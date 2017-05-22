@@ -48,16 +48,18 @@ void loop()
  
 }
 
-void doPrzodu(){
+void doPrzodu()
+{
      
   digitalWrite(s1b, LOW);
   digitalWrite(s1a, HIGH);
   digitalWrite(s2b, LOW); 
   digitalWrite(s2a, HIGH);
-  }
+}
  
   
-void doTylu(){
+void doTylu()
+{
  
   digitalWrite(s1a, LOW);
   digitalWrite(s1b, HIGH);
@@ -65,7 +67,8 @@ void doTylu(){
   digitalWrite(s2b, HIGH);
 }
  
-void wPrawo(){
+void wPrawo()
+{
   
   digitalWrite(s1b, LOW);
   digitalWrite(s1a, HIGH);
@@ -75,7 +78,8 @@ void wPrawo(){
 }
  
  
-void wLewo(){
+void wLewo()
+{
   
   digitalWrite(s1a, LOW);
   digitalWrite(s1b, HIGH);
