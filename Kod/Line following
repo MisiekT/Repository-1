@@ -17,3 +17,10 @@ void loop()
   int lewy=analogRead(sl);
   int prawy=analogRead(sp);
 }
+
+if(srodkowy>=500 && lewy<500 && prawy<500)
+  //jedz prosto
+else if(lewy>=500 && srodkowy<500 && prawy<500)
+  //skrec w prawo
+else if(prawy>=500 && srodkowy<500 && lewy<500)
+  //skrec w lewo
