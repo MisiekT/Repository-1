@@ -60,7 +60,7 @@ void doPrzodu(){
 void doTylu(){
  
   digitalWrite(s1a, LOW);
-  digitalWrite(s2b, HIGH);
+  digitalWrite(s1b, HIGH);
   digitalWrite(s2a, LOW);
   digitalWrite(s2b, HIGH);
 }
