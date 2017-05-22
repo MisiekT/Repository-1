@@ -1,0 +1,85 @@
+
+
+#define s1a 10
+#define s1b 11
+#define s2a 6
+#define s2b 7
+#define pwm1 9
+#define pwm2 5
+
+void setup() 
+{
+  
+  pinMode(s1a, OUTPUT);
+  pinMode(s1b, OUTPUT);
+  pinMode(s2a, OUTPUT);
+  pinMode(s2b, OUTPUT);
+  pinMode(pwm1, OUTPUT);
+  pinMode(pwm2, OUTPUT);
+ 
+  
+  digitalWrite(pwm1, LOW);
+  digitalWrite(pwm2, LOW);
+  
+ 
+}
+
+void loop() 
+{
+ 
+  digitalWrite(pwm1, HIGH);
+  digitalWrite(pwm2, HIGH);
+ 
+    doPrzodu();
+ 
+  delay(2000);
+ 
+    doTylu();
+ 
+  delay(2000);
+ 
+    wPrawo();
+ 
+  delay(2000);
+ 
+    wLewo(); 
+ 
+  delay(2000);
+ 
+}
+
+void doPrzodu(){
+     
+  digitalWrite(s1b, LOW);
+  digitalWrite(s1a, HIGH);
+  digitalWrite(s2b, LOW); 
+  digitalWrite(s2a, HIGH);
+  }
+ 
+  
+void doTylu(){
+ 
+  digitalWrite(s1a, LOW);
+  digitalWrite(s2b, HIGH);
+  digitalWrite(s2a, LOW);
+  digitalWrite(s2b, HIGH);
+}
+ 
+void wPrawo(){
+  
+  digitalWrite(s1b, LOW);
+  digitalWrite(s1a, HIGH);
+  digitalWrite(s2a, LOW);
+  digitalWrite(s2b, HIGH);
+ 
+}
+ 
+ 
+void wLewo(){
+  
+  digitalWrite(s1a, LOW);
+  digitalWrite(s1b, HIGH);
+  digitalWrite(s2b, LOW);
+  digitalWrite(s2a, HIGH);
+ 
+}
