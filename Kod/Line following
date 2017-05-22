@@ -1,0 +1,19 @@
+#define ss A0
+#define sl A1
+#define sp A2
+
+void setup()
+{
+  pinMode(ss, INPUT);
+  pinMode(sl, INPUT);
+  pinMode(sp, INPUT);
+  
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  int srodkowy=analogRead(ss);
+  int lewy=analogRead(sl);
+  int prawy=analogRead(sp);
+}
