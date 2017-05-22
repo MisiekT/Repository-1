@@ -2,6 +2,8 @@
 #define sl A1
 #define sp A2
 
+#define prog
+
 void setup()
 {
   pinMode(ss, INPUT);
@@ -18,10 +20,10 @@ void loop()
   int prawy=analogRead(sp);
 
 
-if(srodkowy>=500 && lewy<500 && prawy<500)
+if(srodkowy>=prog && lewy<prog && prawy<prog)
   //jedz prosto
-else if(lewy>=500 && srodkowy<500 && prawy<500)
-  //skrec w prawo
-else if(prawy>=500 && srodkowy<500 && lewy<500)
+else if(lewy>=prog && srodkowy<prog && prawy<prog)
   //skrec w lewo
+else if(prawy>=prog && srodkowy<prog && lewy<prog)
+  //skrec w prawo
 }
