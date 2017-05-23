@@ -1,4 +1,4 @@
-
+#include <SPI.h>
 
 #define s1a 10
 #define s1b 11
