@@ -1,3 +1,5 @@
+#include <SPI.h>
+
 #define ss A0
 #define sl A1
 #define sp A2
