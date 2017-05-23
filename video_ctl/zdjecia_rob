@@ -1,0 +1,3 @@
+fswebcam -l 1 -d /dev/viceo0 --no-bannner zdj
+#jesli wszystko bedzie ok to mozna uruchomic jego wersje bezglosna
+#fswebcam -l 1 -b -d /dev/video0 --no-banner zdj
