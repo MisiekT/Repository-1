@@ -12,9 +12,9 @@ int main(void)
 	Mat img = imread(nazwa_pliku);
 	if( !img.data )
 	{
-		status = 0;
+		status = -1;
 	} else {
-		status = 1;
+		status = 0;
 	}
 	return status;
 }
