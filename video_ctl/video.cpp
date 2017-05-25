@@ -7,14 +7,5 @@ using namespace std;
 
 int main(void)
 {
-	const string nazwa_pliku = "zdj.jpg";
-	int status = 0;
-	Mat img = imread(nazwa_pliku);
-	if( !img.data )
-	{
-		status = -1;
-	} else {
-		status = 0;
-	}
-	return status;
+	const string nazwa_pliku = "cholerajasna";
 }
