@@ -4,10 +4,31 @@
 #define sl A1
 #define sp A2
 
+//skopiownane z jazdy
+  #define s1a 10
+#define s1b 11
+#define s2a 6
+#define s2b 7
+#define pwm1 9
+#define pwm2 5
+
 #define prog
 
 void setup()
 {
+  //skopiwoane z jazdy
+  pinMode(s1a, OUTPUT);
+  pinMode(s1b, OUTPUT);
+  pinMode(s2a, OUTPUT);
+  pinMode(s2b, OUTPUT);
+  pinMode(pwm1, OUTPUT);
+  pinMode(pwm2, OUTPUT);
+ 
+  
+  digitalWrite(pwm1, LOW);
+  digitalWrite(pwm2, LOW);
+
+
   pinMode(ss, INPUT);
   pinMode(sl, INPUT);
   pinMode(sp, INPUT);
@@ -17,15 +38,37 @@ void setup()
 
 void loop()
 {
+  digitalWrite(pwm1, HIGH);
+  digitalWrite(pwm2, HIGH);
+  
   int srodkowy=analogRead(ss);
   int lewy=analogRead(sl);
   int prawy=analogRead(sp);
 
 
 if(srodkowy>=prog && lewy<prog && prawy<prog)
-  //jedz prosto
+ {    
+  digitalWrite(s1b, LOW);
+  digitalWrite(s1a, HIGH);
+  digitalWrite(s2b, LOW); 
+  digitalWrite(s2a, HIGH);
+}
 else if(lewy>=prog && srodkowy<prog && prawy<prog)
-  //skrec w lewo
+  {
+  
+  digitalWrite(s1a, LOW);
+  digitalWrite(s1b, HIGH);
+  digitalWrite(s2b, LOW);
+  digitalWrite(s2a, HIGH);
+ 
+}
 else if(prawy>=prog && srodkowy<prog && lewy<prog)
-  //skrec w prawo
+  {
+  
+  digitalWrite(s1b, LOW);
+  digitalWrite(s1a, HIGH);
+  digitalWrite(s2a, LOW);
+  digitalWrite(s2b, HIGH);
+ 
+}
 }
