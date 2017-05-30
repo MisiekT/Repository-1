@@ -1,1 +1,1 @@
-g++ video.cpp -o video `pkg-config --cflags --libs opencv`
+g++ -o test_1 test_1.cpp `pkg-config opencv --cflags --libs`
