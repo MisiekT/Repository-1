@@ -5,7 +5,7 @@
 using namespace cv;
 using namespace std;
 
-int main(void)
-{
-	const string nazwa_pliku = "cholerajasna";
-}
+
+ 
+int main() 
+{ 
