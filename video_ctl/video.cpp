@@ -6,17 +6,17 @@ using namespace cv;
 using namespace std; 
   
  
-int main() 
+int main(int argc, char** argv) 
 { 
     VideoCapture capture = VideoCapture(0);                             //kamera  
     Mat img, hsv_img, progowanie;                                       //obraz z kamery, obraz w hsv, wynik progowania
     vector<Mat> hsv_split;                                              //wektor, rozdzielone hsv
- // namedWindow("live", CV_WINDOW_AUTOSIZE);                            //okno 
     Point center;                                                       //punkt
-    int l_val = 100, u_val = 109;                                       //inty dla paskow
-    
- // createTrackbar( "dolna", "live", &l_val, 255, NULL ); 
- // createTrackbar( "gorna", "live", &u_val, 255, NULL ); 
+    int l_val = 100, u_val = 109;                                       //inty dla paskow  
+    if (argc == 2) {
+	l_val = std::stoi( argv[1] );
+	u_val = std::stoi( argv[2] );
+    }   
     
     while ( waitKey(20) != 27 )                 
     { 
@@ -31,7 +31,6 @@ int main()
         center.x = mu.m10 / mu.m00;                                     //wylicz wsp x
         
         cout << center.x << endl;					//wypisz wartosc
-     // imshow("live", progowanie);                                     //wynik progowania
     } 
     capture.release();                                                  //wyjscie z programu
     return 0; 								//------------------
