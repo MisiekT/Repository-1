@@ -1,0 +1,1 @@
+g++ -o desktop_video desktop_video.cpp  `pkg-config opencv --cflags --libs`
