@@ -13,13 +13,13 @@ using namespace std;
  
 int main(int argc, char* argv[]) 
 { 
-    int i=0;
     int cport_nr=24; /* /dev/ttyUSB0 */
     int bdrate=9600; /* 9600 baud */
     char mode[]={'8','N','1',0}; // 8 data bits, no parity, 1 stop bit
     char str_send[BUF_SIZE]; // send data buffer
-    int komenda;
-    
+    int komenda = 0;
+    RS232_OpenComport(cport_nr, bdrate, mode);
+
     VideoCapture capture = VideoCapture(0);                             //kamera  
     Mat img, hsv_img, progowanie;                                       //obraz z kamery, obraz w hsv, wynik progowania
     vector<Mat> hsv_split;                                              //wektor, rozdzielone hsv
@@ -43,12 +43,14 @@ int main(int argc, char* argv[])
         center.x = mu.m10 / mu.m00;                                     //wylicz wsp x
         
         cout << center.x << endl;					//wypisz wartosc
-        i++;
-	if(i%4 == 0){
-	    sprintf(str_send, "%d", center.x);
+       
+	komenda++;
+	
+	cout << "hello" << endl;
+	  /*  sprintf(str_send, "%d", center.x);
 	    RS232_cputs(cport_nr, str_send); 				// sends string on serial
 	    printf("Sent to Arduino: '%s'\n", str_send);
-	    i=0;
+	    komenda=0;*/
 	}
     } 
     capture.release();                                                  //wyjscie z programu

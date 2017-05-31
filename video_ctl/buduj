@@ -1,1 +1,1 @@
-g++ -o video video.cpp `pkg-config opencv --cflags --libs`
+g++ -o video video.cpp  rs232.c `pkg-config opencv --cflags --libs` -Wall -Wextra -o2 
