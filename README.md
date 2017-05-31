@@ -1,4 +1,4 @@
-# Mój stary to fanatyk wędkarstwa
+# Robot
 Nazwa projektu: MBDJ
 
 (Metodologia Scrum)
