@@ -8,7 +8,7 @@ using namespace std;
  
 int main() 
 { 
-    VideoCapture capture = VideoCapture(1);                             //kamera  
+    VideoCapture capture = VideoCapture(0);                             //kamera  
     Mat img, hsv_img, progowanie;                                       //obraz z kamery, obraz w hsv, wynik progowania
     vector<Mat> hsv_split;                                              //wektor, rozdzielone hsv
     namedWindow("live", CV_WINDOW_AUTOSIZE);                            //okno 
