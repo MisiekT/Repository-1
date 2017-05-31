@@ -9,7 +9,7 @@ using namespace std;
 int main() 
 { 
     VideoCapture capture = VideoCapture(1);                             //kamera  
-    Mat img, hsv_img, progowanie;                                       //obraz z kamery, obraz w hsv, czarnobialy do progowania
+    Mat img, hsv_img, progowanie;                                       //obraz z kamery, obraz w hsv, wynik progowania
     vector<Mat> hsv_split;                                              //wektor, rozdzielone hsv
     namedWindow("live", CV_WINDOW_AUTOSIZE);                            //okno 
     Point center;                                                       //punkt
@@ -28,14 +28,13 @@ int main()
         blur(progowanie, progowanie, cv::Size(3,3) );                   // -|- odszumianie 
         erode(progowanie, progowanie, element);                         // -|
         Moments mu = moments(progowanie, true);                         //momenty (masy)
-        
         center.x = mu.m10 / mu.m00;                                     //wylicz wsp x
         
-        cout << center.x << endl;
-        imshow("live", progowanie);                                     //Obraz binarny 
+        cout << center.x << endl;					//wypisz wartosc
+        imshow("live", progowanie);                                     //wynik progowania
     } 
     capture.release();                                                  //wyjscie z programu
-    return 0; 
+    return 0; 								//------------------
 }
 
 
