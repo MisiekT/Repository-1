@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include "rs232.h"
-#define BUF_SIZE 128
+#define BUF_SIZE 1
 
 using namespace cv; 
 using namespace std; 
@@ -17,7 +17,6 @@ int main(int argc, char* argv[])
     int bdrate=9600; /* 9600 baud */
     char mode[]={'8','N','1',0}; // 8 data bits, no parity, 1 stop bit
     char str_send[BUF_SIZE]; // send data buffer
-    int komenda = 0;
     RS232_OpenComport(cport_nr, bdrate, mode);
 
     VideoCapture capture = VideoCapture(0);                             //kamera  
@@ -42,16 +41,11 @@ int main(int argc, char* argv[])
         Moments mu = moments(progowanie, true);                         //momenty (masy)
         center.x = mu.m10 / mu.m00;                                     //wylicz wsp x
         
-        cout << center.x << endl;					//wypisz wartosc
-       
-	komenda++;
+	str_send[0] = char(center.x/2.5);
+	RS232_SendByte(cport_nr, str_send[0]); 
+	RS232_flushTX(cport_nr);				// sends string on serial
+	cout << int(center.x/2.5) << endl;
 	
-	cout << "hello" << endl;
-	  /*  sprintf(str_send, "%d", center.x);
-	    RS232_cputs(cport_nr, str_send); 				// sends string on serial
-	    printf("Sent to Arduino: '%s'\n", str_send);
-	    komenda=0;*/
-	}
     } 
     capture.release();                                                  //wyjscie z programu
     return 0; 								//------------------
