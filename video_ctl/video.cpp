@@ -6,17 +6,17 @@ using namespace cv;
 using namespace std; 
   
  
-int main(int argc, char** argv) 
+int main(int argc, char* argv[]) 
 { 
     VideoCapture capture = VideoCapture(0);                             //kamera  
     Mat img, hsv_img, progowanie;                                       //obraz z kamery, obraz w hsv, wynik progowania
     vector<Mat> hsv_split;                                              //wektor, rozdzielone hsv
     Point center;                                                       //punkt
     int l_val = 100, u_val = 109;                                       //inty dla paskow  
-    if (argc == 2) {
-	l_val = std::stoi( argv[1] );
-	u_val = std::stoi( argv[2] );
-    }   
+    //if (argc == 2) {
+	//l_val = atoi( argv[1] );
+	//u_val = atoi( argv[2] );
+    //}   
     
     while ( waitKey(20) != 27 )                 
     { 
