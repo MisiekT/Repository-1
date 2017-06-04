@@ -13,7 +13,7 @@ using namespace std;
  
 int main(int argc, char* argv[]) 
 { 
-    int cport_nr=24; /* /dev/ttyUSB0 */
+    int cport_nr=16; /* /dev/ttyUSB0 */
     int bdrate=9600; /* 9600 baud */
     char mode[]={'8','N','1',0}; // 8 data bits, no parity, 1 stop bit
     char str_send[BUF_SIZE]; // send data buffer
